@@ -18,7 +18,7 @@ namespace OOP_Project.Admin
         {
             using (StreamWriter writer = new StreamWriter(_file, true))
             {
-                writer.Write(admin.ToString());
+                writer.WriteLine(admin.ToString());
             }
         }
         public void SaveAllDataInFile(List<AdminModel> admins)

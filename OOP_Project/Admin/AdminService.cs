@@ -114,7 +114,7 @@ namespace OOP_Project.Admin
                     doctor.SetSpecialization(Console.ReadLine());
                     Console.Write("Enter Consulatation Fee:");
                     doctor.SetConsultationFee(int.Parse(Console.ReadLine()));
-                    Console.Write("Is Available? (true\false):");
+                    Console.Write("Is Available? (true/false):");
                     doctor.SetIsAvailable(bool.Parse(Console.ReadLine()));
                     _repo.SaveAllDataInFile(doctors);
                     Console.WriteLine("Doctor Updated SuccessFully!");
