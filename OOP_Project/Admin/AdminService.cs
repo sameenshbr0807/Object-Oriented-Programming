@@ -81,19 +81,15 @@ namespace OOP_Project.Admin
             Console.WriteLine("Enter Doctor Name:");
             string name = Console.ReadLine();
             List<AdminModel> doctors = _repo.GetAdminFromUser();
-            bool found=false;
-            foreach(AdminModel doctor in doctors)
+            foreach (AdminModel doctor in doctors)
             {
-                if (doctor.GetDoctorName().Equals(name, StringComparison.OrdinalIgnoreCase))
+                if (doctor.GetDoctorName() == name)
                 {
                     Console.WriteLine(doctor.ToString());
-                    found = false;
+                    return;
                 }
             }
-            if (!found)
-            {
-                Console.WriteLine("Doctor Not found.");
-            }
+            Console.WriteLine("Doctor not found!");
         }
         //4.Update Doctor
         public void UpdateDoctor()
