@@ -104,7 +104,7 @@ namespace OOP_Project.Receptionist
         }
         public override string ToString()
         {
-            return + patientID + "," + patientName + "," + age + "," + gender + "," + disease + "," + roomNumber + ","  +appointmentDate + ","  +billAmount;
+            return  patientID + "," + patientName + "," + age + "," + gender + "," + disease + "," + roomNumber + ","  +appointmentDate + ","  +billAmount;
         }
     }
 }

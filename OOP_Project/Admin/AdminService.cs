@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using OOP_Project.Receptionist;
@@ -220,6 +221,35 @@ namespace OOP_Project.Admin
             Console.WriteLine("Total Doctors:" + totalDoctors);
             Console.WriteLine("Available Doctors:" + availableDoctors);
             Console.WriteLine("UnAvailable Doctors:" + unavailableDoctors);
+        }
+        public void displayMatchingRecords()
+        {
+            Console.Clear();
+            List<AdminModel> doctors = _repo.GetAdminFromUser();
+            int totaldoctors = doctors.Count;
+            int highestfee=0;
+            int lowestfee=0;
+            foreach (AdminModel doctor in doctors)
+            {
+                if (doctor.GetDoctorID == id)
+                {
+                    Console.Write(doctors.ToString());
+                    _repo.SaveAllDataInFile(doctors);
+                }
+                else if (doctor.GetConsultationFee >= fee)
+                {
+                    Console.Write(doctors.ToString());
+                    _repo.SaveAllDataInFile(doctors);
+                }
+                else
+                {
+                    Console.Write("No Records Found!");
+                }
+            }
+            Console.WriteLine("Show Summary");
+            Console.Write("Total Doctors:" + totaldoctors);
+            Console.Write("Highest Fee:" + highestfee);
+            Console.Write("Lowest Fee:" + lowestfee);
         }
     }
 }

@@ -31,5 +31,9 @@ namespace OOP_Project.Receptionist
             string option = Console.ReadLine();
             return option;
         }
+        public void PaginatedView()
+        {
+
+        }
         }
 }

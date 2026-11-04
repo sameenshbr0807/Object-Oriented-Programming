@@ -24,9 +24,20 @@ namespace OOP_Project.Admin
             Console.WriteLine("8. View Available Doctors");
             Console.WriteLine("9. View Hospital Statistics");
             Console.WriteLine("10. Logout");
+            Console.WriteLine("11.Display Matching Records");
             Console.Write("Enter Option:");
             string option = Console.ReadLine();
             return option;
         }
+        AdminService service = new AdminService();
+        public void displayMatchingRecords()
+        {
+            Console.WriteLine("Enter Doctor ID:");
+            int id = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter Consultation Fee:");
+            int fee = int.Parse(Console.ReadLine());
+            service.displayMatchingRecords();
+        }
     }
+    
 }

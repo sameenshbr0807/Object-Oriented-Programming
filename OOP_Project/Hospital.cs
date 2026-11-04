@@ -78,6 +78,8 @@ namespace OOP_Project
                     service.ViewHospitalStatistics();
                 else if (option == "10")
                     break;
+                else if (option == "11")
+                    service.displayMatchingRecords();
                 else
                 {
                     Console.WriteLine("Invalid option!");
@@ -134,6 +136,10 @@ namespace OOP_Project
                 else if (option == "10")
                 {
                     break;
+                }
+                else if (option == "11")
+                {
+                    service.PaginatedView();
                 }
                 else
                 {

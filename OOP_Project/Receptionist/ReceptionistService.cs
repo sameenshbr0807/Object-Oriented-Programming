@@ -275,5 +275,10 @@ namespace OOP_Project.Receptionist
 
             Console.WriteLine("Patient not found.");
         }
+        public void PaginatedView()
+        {
+            List<ReceptionistModel> patients = _repo.GetReceptionistFromFile();
+        }
     }
+  
 }
